@@ -1,0 +1,85 @@
+{
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "james-yu.latex-workshop",
+        "GitHub.copilot",
+        "MS-CEINTL.vscode-language-pack-de"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "files.associations": {
+          "*.tex": "latex"
+        },
+        "latex-workshop.latex.autoClean.run": "onBuilt",
+        "latex-workshop.latex.clean.subfolder.enabled": true,
+        "latex-workshop.latex.recipes": [
+          {
+            "name": "lualatex -> biber -> lualatex*2",
+            "tools": [
+              "lualatex",
+              "biber",
+              "lualatex",
+              "lualatex"
+            ]
+          },
+          {
+            "name": "latexmk",
+            "tools": [
+              "latexmk"
+            ]
+          }
+        ],
+        "latex-workshop.latex.tools": [
+          {
+            "name": "lualatex",
+            "command": "latexmk",
+            "args": [
+              "--shell-escape",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "-lualatex",
+              "%DOC%"
+            ]
+          },
+          {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+              "%DOCFILE%"
+            ]
+          },
+          {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "-pdf",
+              "-outdir=%OUTDIR%",
+              "%DOC%"
+            ]
+          }
+        ],
+        "latex-workshop.linting.chktex.enabled": true,
+        "latex-workshop.synctex.afterBuild.enabled": true
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": "true",
+      "username": "vscode",
+      "userUid": "1000",
+      "userGid": "1000",
+      "upgradePackages": "true"
+    }
+  },
+  "name": "Thesis",
+  "postCreateCommand": "echo 'result' > /tmp/thesis.txt"
+}
