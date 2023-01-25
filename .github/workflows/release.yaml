@@ -13,6 +13,7 @@ jobs:
         uses: devcontainers/action@v1
         with:
           publish-templates: "true"
+          templates-namespace: "torbenwetter/iu-latex-container-templates"
           base-path-to-templates: "./src"
           generate-docs: "true"
 
