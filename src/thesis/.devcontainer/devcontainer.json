@@ -1,7 +1,4 @@
 {
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -80,6 +77,7 @@
       "upgradePackages": "true"
     }
   },
+  "image": "ghcr.io/torbenwetter/iu-latex-container-image:main",
   "name": "Thesis",
   "postCreateCommand": "echo 'result' > /tmp/thesis.txt"
 }

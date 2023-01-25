@@ -1,4 +1,4 @@
-# Dev Container Template for Writing a Thesis with the Help of LaTeX
+# A Dev Container Template for Writing Scientific Work using the LaTeX-Workshop Extension
 
 ## Repo and Template Structure
 
