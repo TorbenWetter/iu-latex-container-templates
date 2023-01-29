@@ -2,7 +2,7 @@
 
 ## Repo and Template Structure
 
-This repository contains _one_ Template - `thesis`. This Templates serves as a template implementation which forms the basis for a LaTeX paper. Similar to the [`devcontainers/templates`](https://github.com/devcontainers/templates) repo, this repository has a `src` folder. Each Template has its own sub-folder, containing at least a `devcontainer-template.json` and `.devcontainer/devcontainer.json`.
+This repository contains _one_ Template - `thesis`. This Templates serves as a template implementation which forms the basis for writing a LaTeX paper. Similar to the [`devcontainers/templates`](https://github.com/devcontainers/templates) repo, this repository has a `src` folder. Each Template has its own sub-folder, containing at least a `devcontainer-template.json` and `.devcontainer/devcontainer.json`.
 
 ```
 ├── src
@@ -11,11 +11,6 @@ This repository contains _one_ Template - `thesis`. This Templates serves as a t
 │   │   └──| .devcontainer
 │   │      ├── devcontainer.json
 │   │      └── Dockerfile
-├── test
-│   ├── thesis
-│   │   └── test.sh
-│   └──test-utils
-│      └── test-utils.sh
 ...
 ```
 
@@ -68,17 +63,6 @@ Next you will need to add the Template to our [public index](https://containers.
 - Open a PR to modify the [collection-index.yml](https://github.com/devcontainers/devcontainers.github.io/blob/gh-pages/_data/collection-index.yml) file
 
 This index is from where [supporting tools](https://containers.dev/supporting) like [VS Code Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) and [GitHub Codespaces](https://github.com/templates/codespaces) surface Templates for their Dev Container Creation Configuration UI.
-
-### Testing the Template
-
-This repo contains a GitHub Action [workflow](.github/workflows/test-pr.yaml) for testing the Template. Similar to the [`devcontainers/templates`](https://github.com/devcontainers/templates) repo, this repository has a `test` folder. The Template has its own sub-folder, containing at least a `test.sh`.
-
-For running the test locally, you would need to execute the following commands -
-
-```
-    ./.github/actions/smoke-test/build.sh thesis
-    ./.github/actions/smoke-test/test.sh thesis
-```
 
 ### Updating Documentation
 
