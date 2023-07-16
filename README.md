@@ -1,4 +1,4 @@
-# A Dev Container Template for Writing Scientific Work using the LaTeX-Workshop Extension
+# A Dev Container Template for Writing Scientific Work at IU International University using the LaTeX-Workshop Extension
 
 ## Repo and Template Structure
 
@@ -6,11 +6,17 @@ This repository contains _one_ Template - `thesis`. This Templates serves as a t
 
 ```
 ├── src
-│   ├── thesis
-│   │   ├── devcontainer-template.json
-│   │   └──| .devcontainer
-│   │      ├── devcontainer.json
-│   │      └── Dockerfile
+│   └── thesis
+│       ├── .devcontainer
+│       │   └── devcontainer.json
+│       ├── .gitignore
+│       ├── README.md
+│       ├── devcontainer-template.json
+│       ├── images
+│       │   ├── image.jpg
+│       │   └── logo.png
+│       ├── main.bib
+│       └── main.tex
 ...
 ```
 

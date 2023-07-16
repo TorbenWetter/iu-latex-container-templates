@@ -70,13 +70,12 @@
   },
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
-      "installZsh": "true",
+      "configureZshAsDefaultShell": "true",
       "username": "vscode",
       "userUid": "1000",
-      "userGid": "1000",
-      "upgradePackages": "true"
+      "userGid": "1000"
     }
   },
-  "image": "ghcr.io/torbenwetter/iu-latex-container-image:main",
+  "image": "ghcr.io/torbenwetter/iu-latex-container-image:latest",
   "name": "Thesis"
 }

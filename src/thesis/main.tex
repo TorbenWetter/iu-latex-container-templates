@@ -1,0 +1,149 @@
+%! Author = Torben Wetter
+
+\documentclass[11pt]{article}
+
+\usepackage[
+  bibliographyfile={main.bib},
+  graphicsdir={images/},
+  logofile={logo.png},
+  art={Bachelorarbeit},
+  hochschule={Internationale Hochschule Duales Studium},
+  studiengang={Informatik B.\,Sc.},
+  titel={Beispiel-Thesis},
+  untertitel={Eine LaTeX-Vorlage für Haus- und Abschlussarbeiten an der IU},
+  autor={Torben~Wetter},
+  matrikelnummer={123456789},
+  adresse={Musterstraße~7\\20355~Hamburg},
+  betreuer={Betreuerin: Dr.~Musterfrau},
+  abgabedatum={30.09.2023}
+]{iuthesis}
+
+\begin{document}
+
+\makecover
+
+\maketoc
+
+\section{Einleitung}
+\label{sec:einleitung}
+
+Hier steht die Einleitung.
+
+Grundsätzlich werden alle gängigen \LaTeX-Befehle unterstützt.
+Mathematische Formeln können im Fließtext eingebettet werden, \zB $E = mc^2$.
+Literatur sollte aus Citavi oder Zotero -- und dabei ist es wichtig, dass das BibTeX-Format verwendet wird -- exportiert und in der Datei \texttt{main.bib} gespeichert werden.
+Anschließend sind Zitate möglich \autocite[S.\,2--5]{haider_realization_2021}.
+Diese Quelle stammt zum Beispiel von den Autoren \citeauthor{haider_realization_2021}.
+Ziemlich \enquote{easy peasy}, oder?
+
+\begin{figure}[h]
+
+  \centering
+
+  \includegraphics[width=0.25\textwidth]{images/image.jpg}
+
+  \caption[Ein lustiges Bild]{Ein lustiges Bild \autocite{illisioun_latex_2021}}
+
+  \label{fig:ein-lustiges-bild}
+
+\end{figure}
+
+Das Einbinden von Bildern wie \autoref{fig:ein-lustiges-bild} ist ebenfalls möglich.
+Auch auf Kapitel kann verwiesen werden, \zB \autoref{sec:theoretische-fundierung}.
+100~\% der Studierenden, die diese Vorlage verwendet haben, haben ihre Thesis bestanden;
+\dash Du wirst es auch schaffen!
+
+\clearpage
+
+\section{Theoretische Fundierung}
+\label{sec:theoretische-fundierung}
+
+Hier steht die theoretische Fundierung.
+
+\subsection{Unterkapitel}
+\label{subsec:unterkapitel}
+
+Hier steht ein Unterkapitel.
+
+\subsubsection{Unterunterkapitel}
+\label{subsubsec:unterunterkapitel}
+
+Hier steht ein Unterunterkapitel.
+
+Tabellen sind gut geeignet, um Daten zu präsentieren.
+
+\begin{tabularx}{\columnwidth}{p{2.75cm}lX}
+  \textbf{Zeitraum}                     & \textbf{Umfang} & \textbf{Aufgabe}                                                                    \\ \toprule
+
+  Vorbereitung: \newline bis 07.08.2023 & 10 Stunden      & Einlesen in Basisliteratur und Recherche zu den neuesten Trends im Bereich der LLMs \\ \midrule
+
+  1. Woche:     \newline ab 07.08.2023  & 6 Stunden       & Aufsetzen des Softwareprojekts und erstes Prototyping, Überarbeitung der Einleitung \\ \midrule
+
+  2. Woche:     \newline ab 14.08.2023  & 6 Stunden       & Literatur- und Marktrecherche, Analyse existierender Lösungen                       \\ \midrule
+
+  3. Woche:     \newline ab 21.08.2023  & 10 Stunden      & Überarbeitung und Erweiterung der Theoretischen Fundierung                          \\ \midrule
+
+  4. Woche:     \newline ab 28.08.2023  & 8 Stunden       & Verbesserung des Methodikkapitels, Vorbereitung der Entwicklung                     \\ \midrule
+
+  5. Woche:     \newline ab 04.09.2023  & 16 Stunden      & Technische Umsetzung der Software, Präsentation der Forschungsergebnisse            \\ \midrule
+
+  6. Woche:     \newline ab 11.09.2023  & 12 Stunden      & Bewertung der Software und Interpretation der Antworten des Chatbots                \\ \midrule
+
+  7. Woche:     \newline ab 18.09.2023  & 6 Stunden       & Beantwortung der Leitfrage, Zusammenfassung der Ergebnisse im Fazit und Ausblick    \\ \midrule
+
+  8. Woche:     \newline ab 25.09.2023  & 6 Stunden       & Plagiatsanalyse, Korrekturlesen und letzte Ausbesserungen
+\end{tabularx}
+
+\subsubsection{Weiteres Unterunterkapitel}
+\label{subsubsec:weiteres-unterunterkapitel}
+
+Hier steht ein weiteres Unterunterkapitel.
+
+\subsection{Weiteres Unterkapitel}
+\label{subsec:weiteres-unterkapitel}
+
+Hier steht ein weiteres Unterkapitel.
+
+\subsubsection{Noch ein Unterunterkapitel}
+\label{subsubsec:noch-ein-unterunterkapitel}
+
+Hier steht noch ein Unterunterkapitel.
+
+\subsubsection{Und noch eins}
+\label{subsubsec:und-noch-eins}
+
+Und hier steht noch ein Unterunterkapitel.
+
+\clearpage
+
+\section{Methodik}
+\label{sec:methodik}
+
+Hier steht die Methodik.
+
+\clearpage
+
+\section{Präsentation und Analyse der Forschungsergebnisse}
+\label{sec:praesentation-und-analyse-der-forschungsergebnisse}
+
+Hier steht die Präsentation und Analyse der Forschungsergebnisse.
+
+\clearpage
+
+\section{Auswertung der Forschungsergebnisse}
+\label{sec:auswertung-der-forschungsergebnisse}
+
+Hier steht die Auswertung der Forschungsergebnisse.
+
+\clearpage
+
+\section{Fazit}
+\label{sec:fazit}
+
+Hier steht das Fazit.
+
+\clearpage
+
+\makebibliography
+
+\end{document}

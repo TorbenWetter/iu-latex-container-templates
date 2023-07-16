@@ -1,6 +1,6 @@
 {
   "id": "thesis",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "name": "Thesis",
   "description": "A Template to write a thesis with LaTeX",
   "documentationURL": "https://github.com/TorbenWetter/iu-latex-container-templates/tree/main/src/thesis",
