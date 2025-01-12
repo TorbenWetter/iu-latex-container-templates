@@ -6,16 +6,16 @@
   bibliographyfile={main.bib},
   graphicsdir={images/},
   logofile={logo.png},
-  art={Bachelorarbeit},
-  hochschule={Internationale Hochschule Duales Studium},
-  studiengang={Informatik B.\,Sc.},
-  titel={Beispiel-Thesis},
-  untertitel={Eine LaTeX-Vorlage für Haus- und Abschlussarbeiten an der IU},
-  autor={Torben~Wetter},
-  matrikelnummer={123456789},
-  adresse={Musterstraße~7\\20355~Hamburg},
-  betreuer={Betreuerin: Dr.~Musterfrau},
-  abgabedatum={30.09.2023}
+  type={Bachelorarbeit},
+  university={Internationale Hochschule Duales Studium},
+  degree={Informatik B.\,Sc.},
+  title={Beispiel-Thesis},
+  subtitle={Eine LaTeX-Vorlage für Haus- und Abschlussarbeiten an der IU},
+  author={Torben~Wetter},
+  matriculationnumber={123456789},
+  address={Musterstraße~7\\20355~Hamburg},
+  supervisor={Prof.~Dr.~Musterfrau},
+  submissiondate={31.03.2025}
 ]{iuthesis}
 
 \begin{document}
@@ -30,10 +30,10 @@
 Hier steht die Einleitung.
 
 Grundsätzlich werden alle gängigen \LaTeX-Befehle unterstützt.
-Mathematische Formeln können im Fließtext eingebettet werden, \zB $E = mc^2$.
+Mathematische Formeln können im Fließtext eingebettet werden, \zB \(E = mc^2\).
 Literatur sollte aus Citavi oder Zotero -- und dabei ist es wichtig, dass das BibTeX-Format verwendet wird -- exportiert und in der Datei \texttt{main.bib} gespeichert werden.
 Anschließend sind Zitate möglich \autocite[S.\,2--5]{haider_realization_2021}.
-Diese Quelle stammt zum Beispiel von den Autoren \citeauthor{haider_realization_2021}.
+Diese Quelle stammt zum Beispiel von den Autor:innen \citeauthor{haider_realization_2021}.
 Ziemlich \enquote{easy peasy}, oder?
 
 \begin{figure}[h]
@@ -145,5 +145,14 @@ Hier steht das Fazit.
 \clearpage
 
 \makebibliography
+
+\appendix
+
+\section{Interviewleitfaden}
+\label{sec:interviewleitfaden}
+
+Dieses Kapitel ist Teil des Anhangs.
+
+\clearpage
 
 \end{document}
