@@ -1,75 +1,85 @@
-# A Dev Container Template for Writing Scientific Work at IU International University using the LaTeX-Workshop Extension
+# IU LaTeX Dev Container Template
 
-## Repo and Template Structure
+A Development Container Template for writing scientific theses at IU International University using VS Code's LaTeX Workshop extension. This template provides a complete, pre-configured LaTeX development environment.
 
-This repository contains _one_ Template - `thesis`. This Templates serves as a template implementation which forms the basis for writing a LaTeX paper. Similar to the [`devcontainers/templates`](https://github.com/devcontainers/templates) repo, this repository has a `src` folder. Each Template has its own sub-folder, containing at least a `devcontainer-template.json` and `.devcontainer/devcontainer.json`.
+## Overview
+
+This template is part of an integrated LaTeX toolchain for IU students:
+
+1. [IU LaTeX Package](https://github.com/TorbenWetter/iu-latex-package) - The core LaTeX package providing document classes and formatting for IU theses
+2. [IU LaTeX Container Image](https://github.com/TorbenWetter/iu-latex-container-image) - A Docker image with TeXLive and the IU LaTeX package pre-installed
+3. This Template - A Dev Container configuration that uses the above components to provide a ready-to-use development environment
+
+## Features
+
+- Pre-configured VS Code environment with LaTeX Workshop extension
+- Full TeX Live installation via the IU LaTeX Container Image
+- IU LaTeX Package pre-installed and configured
+- Sample thesis structure with example files
+- Automatic builds and PDF previews
+- Git-ready with appropriate `.gitignore`
+
+## Getting Started
+
+### Prerequisites
+
+- VS Code with the Dev Containers extension
+- Docker Desktop (Windows/macOS) or Docker Engine (Linux)
+
+### Usage
+
+1. Create a new repository using this template:
+
+   ```
+   ghcr.io/torbenwetter/iu-latex-container-templates/thesis:latest
+   ```
+
+2. Open the repository in VS Code and click "Reopen in Container" when prompted
+
+3. Start writing your thesis by modifying `main.tex`
+
+## Repository Structure
 
 ```
-├── src
-│   └── thesis
-│       ├── .devcontainer
-│       │   └── devcontainer.json
-│       ├── .gitignore
-│       ├── README.md
-│       ├── devcontainer-template.json
-│       ├── images
-│       │   ├── image.jpg
-│       │   └── logo.png
-│       ├── main.bib
-│       └── main.tex
-...
+├── .devcontainer/          # Dev Container configuration
+├── images/                 # Place your images here
+│   ├── image.jpg          # Example image
+│   └── logo.png           # IU logo
+├── main.tex               # Main thesis document
+└── main.bib               # Bibliography file
 ```
 
-### Options
+## Template Options
 
-All available options for a Template should be declared in the `devcontainer-template.json`. The syntax for the `options` property can be found in the [devcontainer Template json properties reference](https://containers.dev/implementors/templates#devcontainer-templatejson-properties).
+The template can be customized through options in `devcontainer-template.json`. See the [Dev Container Template specification](https://containers.dev/implementors/templates#devcontainer-templatejson-properties) for details.
 
-An [implementing tool](https://containers.dev/supporting#tools) will use the `options` property from [the documented Dev Container Template properties](https://containers.dev/implementors/templates#devcontainer-templatejson-properties) for customizing the Template. See [option resolution example](https://containers.dev/implementors/templates#option-resolution-example) for details.
+## Contributing
 
-## Distributing Templates
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-### Versioning
+## Related Projects
 
-Templates are individually versioned by the `version` attribute in a Template's `devcontainer-template.json`. Templates are versioned according to the semver specification. More details can be found in [the Dev Container Template specification](https://containers.dev/implementors/templates-distribution/#versioning).
+- [IU LaTeX Package](https://github.com/TorbenWetter/iu-latex-package) - The core LaTeX package for IU theses
+- [IU LaTeX Container Image](https://github.com/TorbenWetter/iu-latex-container-image) - The Docker image used by this template
 
-### Publishing
+## License
 
-> NOTE: The Distribution spec can be [found here](https://containers.dev/implementors/templates-distribution/).
->
-> While any registry [implementing the OCI Distribution spec](https://github.com/opencontainers/distribution-spec) can be used, this template will leverage GHCR (GitHub Container Registry) as the backing registry.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Templates are source files packaged together that encode configuration for a complete development environment.
+## Technical Details
 
-This repo contains a GitHub Action [workflow](.github/workflows/release.yaml) that will publish the template to GHCR. The Template in this repository can be referenced by an [implementing tool](https://containers.dev/supporting#tools) with:
+### Template Distribution
+
+This template is published to GitHub Container Registry (GHCR) and can be referenced as:
 
 ```
 ghcr.io/torbenwetter/iu-latex-container-templates/thesis:latest
 ```
 
-The provided GitHub Action will also publish a third "metadata" package with just the namespace, eg: `ghcr.io/torbenwetter/iu-latex-container-templates`. This contains information useful for tools aiding in Template discovery.
+### Documentation
 
-'`torbenwetter/iu-latex-container-templates`' is known as the template collection namespace.
+Documentation is automatically generated from `devcontainer-template.json` and `NOTES.md` via GitHub Actions.
 
-### Marking Template Public
+### Version Control
 
-For the Template to be used, it currently needs to be available publicly. By default, OCI Artifacts in GHCR are marked as `private`.
-
-To make them public, navigate to the Template's "package settings" page in GHCR, and set the visibility to 'public`.
-
-```
-https://github.com/users/TorbenWetter/packages/container/iu-latex-container-templates%2Fthesis/settings
-```
-
-### Adding the Template to the Index
-
-Next you will need to add the Template to our [public index](https://containers.dev/templates) so that other community members can find it. Just follow these steps:
-
-- Go to [github.com/devcontainers/devcontainers.github.io](github.com/devcontainers/devcontainers.github.io)
-  - This is the GitHub repo backing the [containers.dev](https://containers.dev/) spec site
-- Open a PR to modify the [collection-index.yml](https://github.com/devcontainers/devcontainers.github.io/blob/gh-pages/_data/collection-index.yml) file
-
-This index is from where [supporting tools](https://containers.dev/supporting) like [VS Code Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) and [GitHub Codespaces](https://github.com/templates/codespaces) surface Templates for their Dev Container Creation Configuration UI.
-
-### Updating Documentation
-
-This repo contains a GitHub Action [workflow](.github/workflows/release.yaml) that will automatically generate documentation (ie. `README.md`) for the Template. This file will be auto-generated from the `devcontainer-template.json` and `NOTES.md`.
+Templates are versioned according to semver specification in each template's `devcontainer-template.json`.
